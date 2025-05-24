@@ -13,9 +13,7 @@ model.fit(X, y)
 
 joblib.dump(model, 'churn_model.pkl')
 
-# Add this after fitting the model
 import json
 
-# Save feature names
 with open("model_features.json", "w") as f:
     json.dump(list(X.columns), f)
